@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Jira Extension",
+    "version": "0.1",
+    "author": "Michal Landsman",
+    "description": "Google Chrome extension for better Jira UX",
+    "homepage_url": "https://github.com/landsman/jira",
+    "content_scripts": [
+        {
+            "matches": ["https://*.atlassian.net/*"],
+            "css": ["jira.css"],
+            "document_end" : "document_idle"
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    }
+}
